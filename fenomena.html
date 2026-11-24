@@ -3,223 +3,284 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fenomena Danau Linow — perubahan warna air yang langka akibat aktivitas vulkanik dan kandungan belerang." />
+  <meta name="description" content="Fenomena Danau Linow — perubahan warna air yang langka akibat aktivitas vulkanik dan kandungan belerang di Kota Tomohon." />
   <title>Danau Linow — Fenomena</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
-      <span class="logo-text">Danau Linow</span>
-    </a>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="sejarah.html">Sejarah</a></li>
-      <li><a href="fenomena.html" class="aktif">Fenomena</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="dampak.html">Dampak</a></li>
-    </ul>
+  <nav class="navbar" id="mainNav">
+    <div class="container-fluid px-4">
+      <a href="index.html" class="nav-logo navbar-brand">
+        <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
+        <span class="logo-text">Danau Linow</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+          <li class="nav-item"><a href="sejarah.html" class="nav-link">Sejarah</a></li>
+          <li class="nav-item"><a href="fenomena.html" class="nav-link aktif">Fenomena</a></li>
+          <li class="nav-item"><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li class="nav-item"><a href="dampak.html" class="nav-link">Dampak</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <div class="page-header">
-    <p class="eyebrow">Keajaiban Alam</p>
-    <h1>Fenomena <em>Danau Linow</em></h1>
-    <p>Danau yang airnya bisa berubah warna secara alami — hijau zamrud, biru toska, hingga kuning keemasan</p>
+    <p class="eyebrow">Keajaiban Vulkanik Terlangka</p>
+    <h1 data-aos="fade-down">Fenomena <em>Tiga Warna</em></h1>
+    <p>Danau vulkanik yang airnya berganti warna secara alami — hijau zamrud, biru toska, hingga kuning keemasan</p>
   </div>
 
-  <section class="section-light">
+  <section class="section-dark py-5">
     <div class="container">
-      <div class="grid-2" style="align-items: center; gap: 60px;">
+      <div class="text-center mb-4" data-aos="fade-up">
+        <span class="badge-custom mb-2"><i class="bi bi-clock-history"></i> Simulasi Interaktif</span>
+        <h2 class="section-title light">Eksplorasi Waktu &amp; <em class="gold">Warna Air</em></h2>
+        <p class="teks-light" style="max-width: 650px; margin: 0 auto;">
+          Pilih waktu kunjungan di bawah ini untuk melihat simulasi perubahan rona air danau beserta panduan fotonya.
+        </p>
+      </div>
 
-        <div>
-          <p class="eyebrow teal">Penjelasan Umum</p>
-          <h2 class="section-title dark mb-20">
-            Air yang<br><em>Berubah-ubah</em>
-          </h2>
-          <p class="teks-dark">
-            Danau Linow adalah salah satu dari sedikit danau di dunia yang airnya dapat
-            berubah warna secara alami. Fenomena ini bukan sulap atau rekayasa manusia,
-            melainkan murni terjadi karena proses alam yang berkaitan dengan
-            <strong>aktivitas vulkanik</strong> dan <strong>kandungan belerang</strong> di
-            dalam air danau.
+      <div class="simulator-container" data-aos="zoom-in">
+        <div class="simulator-tabs">
+          <button class="simulator-btn active" data-color="hijau">
+            <i class="bi bi-sunrise"></i> Pagi Hari · Hijau Zamrud
+          </button>
+          <button class="simulator-btn" data-color="biru">
+            <i class="bi bi-sun"></i> Siang Terik · Biru Toska
+          </button>
+          <button class="simulator-btn" data-color="kuning">
+            <i class="bi bi-sunset"></i> Sore / Geotermal · Kuning Emas
+          </button>
+        </div>
+
+        <div class="simulator-display">
+          <div class="simulator-img-wrap">
+            <span class="simulator-badge bg-success text-white" id="simBadge">Hijau Zamrud</span>
+            <img id="simImg" src="images/Danau Hijau Zambrut.webp" alt="Danau Hijau Zamrud" />
+          </div>
+
+          <div class="simulator-content">
+            <div class="simulator-tag text-success" id="simTag">Pagi Hari · 08.00 - 10.30 WITA</div>
+            <h3 class="simulator-title" id="simTitle">Hijau Zamrud yang Menyejukkan</h3>
+            <p class="simulator-desc" id="simDesc">
+              Saat matahari terbit dengan sudut rendah, berkas sinar berinteraksi dengan alga mikroskopis dan endapan belerang terlarut. Permukaan kawah memancarkan warna hijau zamrud jernih yang tenang, sering diiringi embusan uap belerang hangat.
+            </p>
+
+            <div class="simulator-meta-grid">
+              <div class="simulator-meta-card">
+                <div class="meta-label"><i class="bi bi-clock me-1"></i> Waktu Terbaik</div>
+                <div class="meta-value" id="simWaktu">08.00 – 10.30 WITA</div>
+              </div>
+              <div class="simulator-meta-card">
+                <div class="meta-label"><i class="bi bi-brightness-high me-1"></i> Kondisi Cahaya</div>
+                <div class="meta-value" id="simCahaya">Sudut Rendah (Pagi)</div>
+              </div>
+              <div class="simulator-meta-card">
+                <div class="meta-label"><i class="bi bi-droplet-half me-1"></i> Penyebab Utama</div>
+                <div class="meta-value" id="simReaksi">Alga + Belerang Terlarut</div>
+              </div>
+              <div class="simulator-meta-card">
+                <div class="meta-label"><i class="bi bi-camera me-1"></i> Tips Fotografi</div>
+                <div class="meta-value" id="simTips">Angle rendah dekat dermaga kayu</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow teal">Perbandingan Visual</p>
+        <h2 class="section-title dark">Tiga Wajah <em>Keajaiban Danau</em></h2>
+        <p class="teks-dark" style="max-width: 650px; margin: 0 auto;">
+          Setiap warna menghadirkan atmosfer dan sensasi pemandangan yang berbeda bagi wisatawan.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="color-compare-card">
+            <div class="color-compare-header">
+              <img src="images/Danau Hijau Zambrut.webp" alt="Danau Hijau Zamrud" />
+            </div>
+            <div class="color-bar hijau"></div>
+            <div class="color-compare-body">
+              <span class="color-badge-pill hijau"><i class="bi bi-clock"></i> Pagi Hari (08.00 - 10.30)</span>
+              <h3>Hijau Zamrud</h3>
+              <p class="teks-dark">
+                Warna paling dominan di pagi hari. Pantulan vegetasi perbukitan pinus berpadu dengan kandungan sulfur menciptakan suasana tenang dan sejuk.
+              </p>
+              <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Suhu Air: ~25°C</span>
+                <span class="badge bg-light text-success border">Sering Muncul</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="color-compare-card">
+            <div class="color-compare-header">
+              <img src="images/Danau Toska.webp" alt="Danau Biru Toska" />
+            </div>
+            <div class="color-bar biru"></div>
+            <div class="color-compare-body">
+              <span class="color-badge-pill biru"><i class="bi bi-sun"></i> Siang Hari (11.00 - 14.30)</span>
+              <h3>Biru Toska</h3>
+              <p class="teks-dark">
+                Muncul saat langit cerah tanpa awan. Partikel air menyerap spektrum warna merah dan memantulkan warna biru langit berpadu dasar kawah.
+              </p>
+              <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Suhu Air: ~27°C</span>
+                <span class="badge bg-light text-primary border">Sangat Indah</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="color-compare-card">
+            <div class="color-compare-header">
+              <img src="images/Danau Kuning emas.webp" alt="Danau Kuning Emas" />
+            </div>
+            <div class="color-bar kuning"></div>
+            <div class="color-compare-body">
+              <span class="color-badge-pill kuning"><i class="bi bi-fire"></i> Geotermal Aktif / Sore</span>
+              <h3>Kuning Keemasan</h3>
+              <p class="teks-dark">
+                Fenomena langka saat konsentrasi belerang murni keluar dalam jumlah besar dari retakan magma bawah danau, membuat air berkilau kuning keemasan.
+              </p>
+              <div class="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted">Suhu Air: ~30°C</span>
+                <span class="badge bg-light text-warning border">Fenomena Langka</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-green py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow cream">Penjelasan Ilmiah</p>
+        <h2 class="section-title light">Sains di Balik <em class="gold">Perubahan Warna</em></h2>
+        <p class="teks-light" style="max-width: 700px; margin: 0 auto;">
+          Bukan mistis ataupun rekayasa buatan. Perubahan warna Danau Linow adalah hasil simfoni empat proses geologis dan optika alami yang bekerja harmonis.
+        </p>
+      </div>
+
+      <div class="science-grid">
+        <div class="science-card" data-aos="fade-right" data-aos-delay="100">
+          <div class="science-icon"><i class="bi bi-radioactive"></i></div>
+          <h3 class="science-title">Kandungan Belerang (Sulfur)</h3>
+          <p class="science-desc">
+            Magma panas di bawah kaldera melepaskan gas hidrogen sulfida dan partikel sulfur terlarut. Tingkat kepekatan mineral ini memengaruhi cara air menyerap dan membiaskan cahaya.
           </p>
-          <p class="teks-dark">
-            Perubahan warna terjadi tergantung pada dua faktor utama: <strong>sudut cahaya
-            matahari</strong> yang menyinari permukaan air, dan <strong>konsentrasi gas
-            belerang</strong> yang keluar dari bawah danau pada waktu tertentu. Itulah
-            mengapa warna danau bisa berbeda-beda di pagi, siang, dan sore hari.
+          <span class="science-badge">Faktor Kimiawi</span>
+        </div>
+
+        <div class="science-card" data-aos="fade-left" data-aos-delay="200">
+          <div class="science-icon"><i class="bi bi-sun-fill"></i></div>
+          <h3 class="science-title">Sudut Refraksi Cahaya Matahari</h3>
+          <p class="science-desc">
+            Elevasi matahari dari pagi hingga sore menghasilkan sudut datang cahaya yang terus berubah. Efek dispersi optik Rayleigh menciptakan pantulan warna yang berbeda pada mata manusia.
           </p>
+          <span class="science-badge">Faktor Fisika Optik</span>
         </div>
 
-        <div>
-          <img src="images/Danau Kuning emas.webp"
-               alt="Danau Linow berwarna kuning keemasan"
-               style="width:100%; height:440px; object-fit:cover; border-radius:20px; display:block;" />
+        <div class="science-card" data-aos="fade-right" data-aos-delay="300">
+          <div class="science-icon"><i class="bi bi-flower1"></i></div>
+          <h3 class="science-title">Mikroalga &amp; Flora Air</h3>
+          <p class="science-desc">
+            Meski air danau bersuasana asam (pH rendah), terdapat jenis ganggang mikro termofilik tertentu yang beradaptasi hidup di tepian kawah, memperkuat spektrum warna hijau zamrud.
+          </p>
+          <span class="science-badge">Faktor Biologis</span>
         </div>
 
+        <div class="science-card" data-aos="fade-left" data-aos-delay="400">
+          <div class="science-icon"><i class="bi bi-activity"></i></div>
+          <h3 class="science-title">Aktivitas Geotermal Bawah Air</h3>
+          <p class="science-desc">
+            Ventilasi hidrotermal aktif di dasar danau terus memompa gelembung gas panas dan mineral ke permukaan, menyebabkan arus konveksi alami yang mengaduk warna secara dinamis.
+          </p>
+          <span class="science-badge">Faktor Vulkanologi</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section-dark">
+  <section class="section-light py-5">
     <div class="container">
-      <div class="grid-2" style="gap: 80px; align-items:center;">
-
-        <div>
-          <img src="images/Danau Hijau Zambrut.webp"
-               alt="Danau Linow berwarna hijau zamrud"
-               style="width:100%; height:560px; object-fit:cover; border-radius:20px; display:block;" />
-        </div>
-
-        <div>
-          <p class="eyebrow gold">Tiga Wajah Danau</p>
-          <h2 class="section-title light mb-20">
-            Tiga Warna<br><em class="gold">Ajaib</em>
-          </h2>
-
-          <div class="fenomena-box hijau">
-            <h3>🟢 Hijau Zamrud</h3>
-            <p>
-              Muncul ketika cahaya matahari jatuh dari sudut tertentu dan berinteraksi
-              dengan alga serta mineral vulkanik dalam air. Paling sering terlihat di
-              pagi hari saat matahari belum terlalu tinggi.
-            </p>
-          </div>
-
-          <div class="fenomena-box biru">
-            <h3>🔵 Biru Toska</h3>
-            <p>
-              Biasanya muncul saat langit cerah dan matahari berada tepat di atas danau.
-              Air memantulkan warna langit yang berpadu dengan mineral belerang, menciptakan
-              biru toska yang menawan.
-            </p>
-          </div>
-
-          <div class="fenomena-box kuning">
-            <h3>🟡 Kuning Keemasan</h3>
-            <p>
-              Terjadi saat konsentrasi belerang di permukaan air sangat tinggi, biasanya
-              ketika aktivitas geothermal lebih aktif di bawah danau. Warna ini jarang
-              terlihat namun sangat spektakuler.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-light">
-    <div class="container">
-      <div style="text-align:center; margin-bottom: 50px;">
-        <p class="eyebrow teal">Dokumentasi</p>
-        <h2 class="section-title dark">Foto Tiga <em>Warna Danau</em></h2>
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow teal">Panduan Kunjungan</p>
+        <h2 class="section-title dark">Tips Terbaik <em>Menikmati Fenomena</em></h2>
+        <p class="teks-dark" style="max-width: 650px; margin: 0 auto;">
+          Dapatkan pengalaman terbaik dan hasil foto paling maksimal dengan mengikuti saran praktis berikut.
+        </p>
       </div>
 
-      <div class="grid-3">
-
-        <div class="foto-card">
-          <img src="images/Danau Hijau Zambrut.webp" alt="Danau Linow berwarna hijau zamrud" />
-          <div class="foto-overlay">
-            <span class="pill-tag">Pagi Hari</span>
-            <h3>Hijau Zamrud</h3>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="travel-tip-card">
+            <div class="travel-tip-icon text-success"><i class="bi bi-camera-fill"></i></div>
+            <h4>Gunakan Filter Polarizer</h4>
+            <p>Pasang filter CPL pada lensa kamera atau smartphone untuk memotong pantulan kilau air dan menonjolkan saturasi warna asli danau.</p>
           </div>
         </div>
 
-        <div class="foto-card">
-          <img src="images/Danau Toska.webp" alt="Danau Linow berwarna biru toska" />
-          <div class="foto-overlay">
-            <span class="pill-tag">Siang Hari</span>
-            <h3>Biru Toska</h3>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="travel-tip-card gold-border">
+            <div class="travel-tip-icon text-warning"><i class="bi bi-stopwatch-fill"></i></div>
+            <h4>Kunjungi di Dua Waktu</h4>
+            <p>Datanglah di pagi hari (sekitar pukul 09.00) lalu nikmati makan siang di restoran danau hingga pukul 12.30 untuk melihat transformasi warna nyata.</p>
           </div>
         </div>
 
-        <div class="foto-card">
-          <img src="images/Danau Kuning emas.webp" alt="Danau Linow berwarna kuning keemasan" />
-          <div class="foto-overlay">
-            <span class="pill-tag">Langka</span>
-            <h3>Kuning Keemasan</h3>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="travel-tip-card">
+            <div class="travel-tip-icon text-info"><i class="bi bi-cloud-fog-fill"></i></div>
+            <h4>Abadikan Uap Vulkanik</h4>
+            <p>Pagi hari adalah waktu terbaik mengabadikan uap tipis yang menari di atas air, menghasilkan foto bernuansa magis dan sinematik.</p>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <section class="section-green">
-    <div class="container">
-      <p class="eyebrow cream">Sains di Baliknya</p>
-      <h2 class="section-title light mb-20">
-        Penjelasan <em class="gold">Ilmiah</em>
-      </h2>
-      <p class="teks-light" style="max-width:700px;">
-        Secara ilmiah, perubahan warna Danau Linow disebabkan oleh beberapa faktor yang
-        bekerja secara bersamaan:
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Faktor</th>
-            <th>Penjelasan</th>
-            <th>Warna yang Dihasilkan</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Kandungan Belerang (Sulfur)</td>
-            <td>Gas belerang dari aktivitas vulkanik larut dalam air dan memantulkan cahaya berbeda</td>
-            <td>Kuning hingga Hijau</td>
-          </tr>
-          <tr>
-            <td>Sudut Cahaya Matahari</td>
-            <td>Posisi matahari yang berbeda menghasilkan pantulan yang berbeda pula</td>
-            <td>Biru pada siang hari</td>
-          </tr>
-          <tr>
-            <td>Alga dan Mikroorganisme</td>
-            <td>Ganggang hijau dan organisme mikroskopis yang hidup di danau</td>
-            <td>Hijau Zamrud</td>
-          </tr>
-          <tr>
-            <td>Aktivitas Geothermal</td>
-            <td>Panas bumi dan gas yang keluar dari dasar danau mengaduk mineral</td>
-            <td>Kuning Keemasan</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="section-light">
-    <div class="container">
-      <div style="text-align:center; margin-bottom: 40px;">
-        <p class="eyebrow teal">Selain Warna</p>
-        <h2 class="section-title dark">Fakta Menarik <em>Lainnya</em></h2>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="travel-tip-card gold-border">
+            <div class="travel-tip-icon text-danger"><i class="bi bi-shield-check"></i></div>
+            <h4>Kenyamanan &amp; Keamanan</h4>
+            <p>Gunakan sepatu yang nyaman untuk berjalan di dermaga kayu, dan ikuti petunjuk petugas saat berada di dekat titik semburan gas belerang.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="grid-3">
-        <div class="info-card">
-          <div class="info-label">🌡️ Suhu Air</div>
-          <div class="info-value" style="font-size:14px; font-weight:400; line-height:1.6;">
-            Karena aktivitas geothermal, air danau sedikit lebih hangat dibanding danau
-            biasa, berkisar 25–30°C.
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">⚗️ Kadar Asam</div>
-          <div class="info-value" style="font-size:14px; font-weight:400; line-height:1.6;">
-            Kandungan belerang membuat air danau bersifat asam (pH rendah), sehingga
-            hanya sedikit jenis ikan yang bisa hidup di dalamnya.
-          </div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">🌫️ Uap Belerang</div>
-          <div class="info-value" style="font-size:14px; font-weight:400; line-height:1.6;">
-            Pada pagi hari, sering terlihat uap tipis di permukaan danau akibat perbedaan
-            suhu air dan udara bercampur gas belerang.
+      <div class="mt-5" data-aos="zoom-in">
+        <div class="cta-banner">
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fw-bold">Rencanakan Liburan Anda</span>
+          <h3 class="text-white mb-3" style="font-family:'Playfair Display',serif; font-size:32px;">Saksikan Keajaiban Danau Linow Secara Langsung</h3>
+          <p class="text-white-50 mb-4 mx-auto" style="max-width: 600px;">
+            Tiket masuk hanya Rp 20.000 sudah termasuk pemandangan danau tiga warna dan akses fasilitas wisata lengkap.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="index.html#reservasi" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
+              <i class="bi bi-ticket-perforated"></i> Pesan Tiket Sekarang
+            </a>
+            <a href="galeri.html" class="btn-outline" style="display:inline-flex; align-items:center; gap:8px;">
+              <i class="bi bi-images"></i> Lihat Galeri Foto
+            </a>
           </div>
         </div>
       </div>
@@ -258,6 +319,29 @@
       <a href="fenomena.html">↑ Kembali ke Atas</a>
     </div>
   </footer>
+
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0">
+          <h6 class="modal-title text-white" id="imgModalCaption"></h6>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="imgModalSrc" src="" alt="" class="w-100" style="max-height:80vh; object-fit:contain;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" class="btn btn-primary rounded-circle position-fixed"
+    style="bottom:30px; right:30px; width:50px; height:50px; z-index:999; display:none; background:#2E8B75; border:none; align-items:center; justify-content:center;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

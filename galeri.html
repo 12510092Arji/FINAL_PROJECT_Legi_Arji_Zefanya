@@ -5,115 +5,222 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Galeri foto Danau Linow — keindahan danau vulkanik di Tomohon dari berbagai sudut." />
   <title>Danau Linow — Galeri</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
-      <span class="logo-text">Danau Linow</span>
-    </a>
-    <ul>
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="sejarah.html">Sejarah</a></li>
-      <li><a href="fenomena.html">Fenomena</a></li>
-      <li><a href="galeri.html" class="aktif">Galeri</a></li>
-      <li><a href="dampak.html">Dampak</a></li>
-    </ul>
+  <nav class="navbar" id="mainNav">
+    <div class="container-fluid px-4">
+      <a href="index.html" class="nav-logo navbar-brand">
+        <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
+        <span class="logo-text">Danau Linow</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+          <li class="nav-item"><a href="sejarah.html" class="nav-link">Sejarah</a></li>
+          <li class="nav-item"><a href="fenomena.html" class="nav-link">Fenomena</a></li>
+          <li class="nav-item"><a href="galeri.html" class="nav-link aktif">Galeri</a></li>
+          <li class="nav-item"><a href="dampak.html" class="nav-link">Dampak</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <div class="page-header">
     <p class="eyebrow">Dokumentasi Visual</p>
-    <h1>Galeri <em>Foto</em></h1>
-    <p>Keindahan Danau Linow dalam gambar, dari warna air hingga kehidupan di sekitarnya</p>
+    <h1 data-aos="fade-down">Galeri <em>Eksklusif</em></h1>
+    <p>Menjelajahi pesona warna kawah vulkanik, ragam ekosistem alam, hingga kehangatan budaya Minahasa</p>
   </div>
 
-  <section class="section-light">
-    <div class="container">
-      <p class="eyebrow teal">01 — Alam</p>
-      <h2 class="section-title dark mb-30">Keindahan <em>Danau</em></h2>
+  <section class="section-light py-5">
+    <div class="container-fluid px-lg-5">
 
-      <div class="galeri-grid">
-        <figure class="galeri-item">
-          <img src="images/Danau Hijau Zambrut.webp" alt="Danau Linow tampak hijau zamrud" />
-          <figcaption>Danau Linow — Hijau Zamrud</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Danau Toska.webp" alt="Danau Linow tampak biru toska" />
-          <figcaption>Danau Linow — Biru Toska</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Danau Kuning emas.webp" alt="Danau Linow tampak kuning keemasan" />
-          <figcaption>Danau Linow — Kuning Keemasan</figcaption>
-        </figure>
+      <div class="gallery-stats-bar" data-aos="fade-up">
+        <span class="gallery-stat-pill"><i class="bi bi-images text-success"></i> 14 Koleksi Foto</span>
+        <span class="gallery-stat-pill"><i class="bi bi-palette text-warning"></i> 3 Warna Air Alami</span>
+        <span class="gallery-stat-pill"><i class="bi bi-geo-alt text-danger"></i> Tomohon, Sulawesi Utara</span>
+        <span class="gallery-stat-pill"><i class="bi bi-hand-index-thumb text-primary"></i> Klik untuk Perbesar</span>
       </div>
-    </div>
-  </section>
 
-  <section class="section-dark">
-    <div class="container">
-      <p class="eyebrow gold">02 — Ekosistem</p>
-      <h2 class="section-title light mb-30">Flora &amp; <em class="gold">Fauna</em></h2>
+      <div class="bento-gallery" id="bentoGallery">
 
-      <div class="galeri-grid">
-        <figure class="galeri-item">
-          <img src="images/Burung Belibis.webp" alt="Burung belibis di Danau Linow" />
-          <figcaption>Burung Belibis — Penghuni Setia Danau</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Spot Foto Menarik.webp" alt="Spot foto menarik di Danau Linow" />
-          <figcaption>Spot Foto Instagramable</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Iklim.webp" alt="Kondisi iklim dan vegetasi sekitar danau" />
-          <figcaption>Vegetasi Hijau di Sekitar Danau</figcaption>
-        </figure>
+        <div class="bento-item span-2-both" data-category="alam" data-aos="fade-up"
+             data-title="Danau Hijau Zamrud" data-badge="Fenomena Utama"
+             data-desc="Pesona air danau berwarna hijau zamrud yang memesona saat pagi hari.">
+          <img src="images/Danau Hijau Zambrut.webp" alt="Danau Hijau Zamrud" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Fenomena Utama</span>
+            <h3 class="bento-title">Danau Hijau Zamrud</h3>
+            <p class="bento-desc">Pesona air danau berwarna hijau zamrud saat pagi hari akibat interaksi cahaya dan mineral belerang.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="ekosistem" data-aos="fade-up" data-aos-delay="100"
+             data-title="Burung Belibis Danau" data-badge="Satwa Liar"
+             data-desc="Habitat alami kawanan burung belibis liar yang berenang bebas di tepian Danau Linow.">
+          <img src="images/Burung Belibis.webp" alt="Burung Belibis" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Satwa Liar</span>
+            <h3 class="bento-title">Burung Belibis</h3>
+            <p class="bento-desc">Penghuni setia perairan danau vulkanik.</p>
+          </div>
+        </div>
+
+        <div class="bento-item span-2" data-category="alam" data-aos="fade-up" data-aos-delay="150"
+             data-title="Biru Toska Siang Hari" data-badge="Gradasi Warna"
+             data-desc="Air danau memantulkan warna langit yang berpadu dengan uap mineral belerang, menghasilkan biru toska spektakuler.">
+          <img src="images/Danau Toska.webp" alt="Danau Biru Toska" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Gradasi Warna</span>
+            <h3 class="bento-title">Biru Toska Menawan</h3>
+            <p class="bento-desc">Pantulan warna langit dan belerang di bawah terik matahari siang hari.</p>
+          </div>
+        </div>
+
+        <div class="bento-item span-2-row" data-category="wisata" data-aos="fade-up" data-aos-delay="200"
+             data-title="Spot Foto Tepi Danau" data-badge="Wisata Populer"
+             data-desc="Area dek kayu favorit pengunjung untuk mengabadikan momen instagramable dengan latar perbukitan hijau.">
+          <img src="images/Spot Foto Menarik.webp" alt="Spot Foto Menarik" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Wisata Populer</span>
+            <h3 class="bento-title">Spot Foto Estetik</h3>
+            <p class="bento-desc">Dek kayu instagramable menghadap langsung ke danau.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="alam" data-aos="fade-up" data-aos-delay="100"
+             data-title="Kuning Keemasan" data-badge="Fenomena Langka"
+             data-desc="Konsentrasi belerang pekat menciptakan kilau kuning keemasan yang jarang ditemukan di dunia.">
+          <img src="images/Danau Kuning emas.webp" alt="Danau Kuning Emas" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Fenomena Langka</span>
+            <h3 class="bento-title">Kuning Emas</h3>
+            <p class="bento-desc">Kilau belerang vulkanik aktif.</p>
+          </div>
+        </div>
+
+        <div class="bento-item span-2" data-category="wisata" data-aos="fade-up" data-aos-delay="150"
+             data-title="D-Linow Restaurant" data-badge="Kuliner Tepi Danau"
+             data-desc="Restoran representatif yang menyajikan hidangan autentik Minahasa diiringi pemandangan kaldera.">
+          <img src="images/D-Linow Restaurant.webp" alt="D-Linow Restaurant" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Kuliner Tepi Danau</span>
+            <h3 class="bento-title">D-Linow Restaurant</h3>
+            <p class="bento-desc">Santapan khas Minahasa dengan panorama alam yang menyejukkan hati.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="wisata" data-aos="fade-up" data-aos-delay="200"
+             data-title="Linow Coffee Shop" data-badge="Tempat Bersantai"
+             data-desc="Menikmati sajian kopi hangat khas Tomohon di udara sejuk 18-24 derajat Celsius.">
+          <img src="images/Linow Coffee Shop.webp" alt="Linow Coffee Shop" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Tempat Bersantai</span>
+            <h3 class="bento-title">Linow Coffee Shop</h3>
+            <p class="bento-desc">Kopi hangat di udara perbukitan sejuk.</p>
+          </div>
+        </div>
+
+        <div class="bento-item span-2" data-category="wisata" data-aos="fade-up" data-aos-delay="100"
+             data-title="Linow Resort &amp; Campground" data-badge="Akomodasi &amp; Berkemah"
+             data-desc="Penginapan dan lokasi berkemah eksklusif berlatar pemandangan danau dan udara segar perbukitan.">
+          <img src="images/Danau Linow Resort Campground.webp" alt="Resort and Campground" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Akomodasi &amp; Berkemah</span>
+            <h3 class="bento-title">Resort &amp; Campground</h3>
+            <p class="bento-desc">Pengalaman bermalam di tepian kawah vulkanik Tomohon.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="budaya" data-aos="fade-up" data-aos-delay="150"
+             data-title="Pameran Kerajinan Minahasa" data-badge="Karya Seni"
+             data-desc="Pameran kerajinan tangan lokal, anyaman, dan ukiran kayu khas masyarakat adat Minahasa.">
+          <img src="images/Pameran Kerajinan Tangan.webp" alt="Pameran Kerajinan Tangan" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Karya Seni</span>
+            <h3 class="bento-title">Kerajinan Minahasa</h3>
+            <p class="bento-desc">Ukiran dan seni anyam warisan leluhur.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="alam" data-aos="fade-up" data-aos-delay="200"
+             data-title="Kawasan Hutan Asri" data-badge="Ekologi"
+             data-desc="Vegetasi pinus dan tumbuhan hijau yang menjaga kualitas udara dan kelestarian ekosistem danau.">
+          <img src="images/Iklim.webp" alt="Kondisi Iklim dan Vegetasi" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Ekologi</span>
+            <h3 class="bento-title">Vegetasi Asri</h3>
+            <p class="bento-desc">Kesejukan iklim perbukitan 800 mdpl.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="budaya" data-aos="fade-up" data-aos-delay="100"
+             data-title="Produk UMKM Lokal" data-badge="Ekonomi Kreatif"
+             data-desc="Aneka camilan, rempah, dan souvenir khas Tomohon hasil kreasi kelompok perempuan setempat.">
+          <img src="images/UMKM Lokal (Pengalaman).webp" alt="UMKM Lokal" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Ekonomi Kreatif</span>
+            <h3 class="bento-title">Produk UMKM</h3>
+            <p class="bento-desc">Kudapan dan cinderamata olahan lokal.</p>
+          </div>
+        </div>
+
+        <div class="bento-item span-2" data-category="alam" data-aos="fade-up" data-aos-delay="150"
+             data-title="Potensi Geothermal Tomohon" data-badge="Energi Bersih"
+             data-desc="Pemanfaatan uap panas bumi di sekitar Danau Linow sebagai energi ramah lingkungan bagi Sulawesi Utara.">
+          <img src="images/Energi Bersih.webp" alt="Energi Geothermal" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Energi Bersih</span>
+            <h3 class="bento-title">Energi Geothermal</h3>
+            <p class="bento-desc">Pembangkit tenaga panas bumi Lahendong yang ramah lingkungan.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="budaya" data-aos="fade-up" data-aos-delay="200"
+             data-title="Masyarakat Pengelola Wisata" data-badge="Pemberdayaan SDM"
+             data-desc="Warga Tomohon yang diberdayakan sebagai pemandu wisata dan pengelola kawasan ramah pengunjung.">
+          <img src="images/SDM.webp" alt="SDM Pariwisata" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Pemberdayaan</span>
+            <h3 class="bento-title">Keramahan Warga</h3>
+            <p class="bento-desc">Pelaku wisata lokal yang bersahabat.</p>
+          </div>
+        </div>
+
+        <div class="bento-item" data-category="budaya" data-aos="fade-up" data-aos-delay="250"
+             data-title="Pasar Oleh-Oleh Tradisional" data-badge="Cinderamata"
+             data-desc="Dukungan wisata terhadap perputaran ekonomi puluhan gerai cinderamata di kawasan Tomohon.">
+          <img src="images/UMKM (Dampak).webp" alt="UMKM Kerajinan" loading="lazy" />
+          <div class="bento-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+          <div class="bento-overlay">
+            <span class="bento-badge">Cinderamata</span>
+            <h3 class="bento-title">Geliat UMKM</h3>
+            <p class="bento-desc">Pasar oleh-oleh kebanggaan warga.</p>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
 
-  <section class="section-light">
-    <div class="container">
-      <p class="eyebrow teal">03 — Fasilitas</p>
-      <h2 class="section-title dark mb-30">Fasilitas <em>Wisata</em></h2>
-
-      <div class="galeri-grid">
-        <figure class="galeri-item">
-          <img src="images/D-Linow Restaurant.webp" alt="D-Linow Restaurant di tepi danau" />
-          <figcaption>D-Linow Restaurant</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Linow Coffee Shop.webp" alt="Linow Coffee Shop" />
-          <figcaption>Linow Coffee Shop</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Danau Linow Resort Campground.webp" alt="Linow Resort dan area berkemah" />
-          <figcaption>Linow Resort &amp; Campground</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-green">
-    <div class="container">
-      <p class="eyebrow cream">04 — Budaya &amp; UMKM</p>
-      <h2 class="section-title light mb-30">Aktivitas &amp; <em class="gold">Kerajinan Lokal</em></h2>
-
-      <div class="galeri-grid">
-        <figure class="galeri-item">
-          <img src="images/Pameran Kerajinan Tangan.webp" alt="Pameran kerajinan tangan di kawasan Danau Linow" />
-          <figcaption>Pameran Kerajinan Tangan Lokal</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/UMKM Lokal (Pengalaman).webp" alt="UMKM lokal di kawasan wisata" />
-          <figcaption>UMKM Lokal — Produk Olahan</figcaption>
-        </figure>
-        <figure class="galeri-item">
-          <img src="images/Energi Bersih.webp" alt="Pemanfaatan energi bersih geothermal" />
-          <figcaption>Potensi Energi Geothermal</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
@@ -145,10 +252,46 @@
     </div>
     <hr class="footer-divider" />
     <div class="footer-bottom">
-      <p>© 2025 Danau Linow — Dibuat untuk Tugas Mata Kuliah Web Design</p>
+      <p>© 2026 Danau Linow — Dibuat untuk Tugas Mata Kuliah Web Design</p>
       <a href="galeri.html">↑ Kembali ke Atas</a>
     </div>
   </footer>
+
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border-0 overflow-hidden shadow-lg">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="badge bg-warning text-dark mb-1" id="imgModalBadge">Foto</span>
+            <h5 class="modal-title text-white" id="imgModalCaption">Detail Foto</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body position-relative p-0 my-3 text-center bg-black">
+          <button class="modal-nav-btn modal-prev-btn" id="modalPrevBtn" aria-label="Foto Sebelumnya">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <img id="imgModalSrc" src="" alt="" class="w-100" style="max-height:75vh; object-fit:contain;" />
+          <button class="modal-nav-btn modal-next-btn" id="modalNextBtn" aria-label="Foto Berikutnya">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+        <div class="modal-footer border-0 pt-0 d-flex justify-content-between align-items-center">
+          <p class="small text-white-50 mb-0" id="imgModalDesc">-</p>
+          <span class="badge bg-secondary" id="imgModalIndex">1 / 14</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" class="btn btn-primary rounded-circle position-fixed"
+    style="bottom:30px; right:30px; width:50px; height:50px; z-index:999; display:none; background:#2E8B75; border:none; align-items:center; justify-content:center;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

@@ -5,86 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Danau Linow — Danau vulkanik ajaib di Kota Tomohon, Sulawesi Utara. Terkenal dengan fenomena perubahan warna air yang langka di dunia." />
   <title>Danau Linow — Beranda</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
-      <span class="logo-text">Danau Linow</span>
-    </a>
-    <ul>
-      <li><a href="index.html" class="aktif">Beranda</a></li>
-      <li><a href="sejarah.html">Sejarah</a></li>
-      <li><a href="fenomena.html">Fenomena</a></li>
-      <li><a href="galeri.html">Galeri</a></li>
-      <li><a href="dampak.html">Dampak</a></li>
-    </ul>
+  <nav class="navbar" id="mainNav">
+    <div class="container-fluid px-4">
+      <a href="index.html" class="nav-logo navbar-brand">
+        <img src="images/Logo Danau Linow.webp" alt="Logo Danau Linow" class="logo-img" />
+        <span class="logo-text">Danau Linow</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a href="index.html" class="nav-link aktif">Beranda</a></li>
+          <li class="nav-item"><a href="sejarah.html" class="nav-link">Sejarah</a></li>
+          <li class="nav-item"><a href="fenomena.html" class="nav-link">Fenomena</a></li>
+          <li class="nav-item"><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li class="nav-item"><a href="dampak.html" class="nav-link">Dampak</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <section class="hero">
     <div class="hero-overlay"></div>
 
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up">
       <span class="hero-badge">📍 Tomohon · Sulawesi Utara · Indonesia</span>
       <h1>Danau<br><em>Linow</em></h1>
       <p class="hero-sub">The Tricolor Wonder Lake</p>
       <p class="hero-desc">
-        Danau vulkanik yang airnya bisa berubah warna menjadi hijau zamrud, biru toska,
-        dan kuning keemasan — salah satu fenomena alam paling langka di Indonesia.
+        Danau kawah vulkanik ajaib yang airnya berubah warna menjadi hijau zamrud, biru toska,
+        hingga kuning keemasan. Destinasi alam paling memukau di Kota Bunga Tomohon.
       </p>
       <div class="hero-buttons">
-        <a href="fenomena.html" class="btn-primary">Fenomena Unik →</a>
-        <a href="galeri.html" class="btn-outline">Lihat Galeri</a>
+        <a href="#paketWisataSection" class="btn-primary">Pilihan Paket Wisata →</a>
+        <a href="#reservasi" class="btn-outline">Reservasi Tiket</a>
       </div>
     </div>
 
-    <div class="hero-stats">
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
       <div class="stat-item">
-        <div class="stat-angka">3</div>
-        <div class="stat-label">Warna Air</div>
+        <div class="stat-angka" data-counter="3" data-suffix="">3</div>
+        <div class="stat-label">Warna Air Alami</div>
       </div>
       <div class="stat-item">
-        <div class="stat-angka">±30 Ha</div>
-        <div class="stat-label">Luas Danau</div>
+        <div class="stat-angka" data-counter="30" data-suffix=" Ha">±30 Ha</div>
+        <div class="stat-label">Luas Kawasan</div>
       </div>
       <div class="stat-item">
-        <div class="stat-angka">800 m</div>
-        <div class="stat-label">Di atas Laut</div>
+        <div class="stat-angka" data-counter="800" data-suffix=" m">800 m</div>
+        <div class="stat-label">Di Atas Laut</div>
       </div>
       <div class="stat-item">
-        <div class="stat-angka">50.000+</div>
+        <div class="stat-angka" data-counter="50000" data-suffix="+">50.000+</div>
         <div class="stat-label">Wisatawan / Tahun</div>
       </div>
     </div>
   </section>
 
-  <section class="section-dark">
-    <div class="container">
+  <section class="section-dark py-5">
+    <div class="container" data-aos="fade-up">
       <div class="grid-2" style="align-items: center; gap: 60px;">
 
-        <div>
+        <div data-aos="fade-right">
           <img src="images/Danau Toska.webp"
                alt="Danau Linow berwarna biru toska"
                style="width:100%; height:440px; object-fit:cover; border-radius:20px; display:block;" />
         </div>
 
-        <div>
+        <div data-aos="fade-left">
           <p class="eyebrow gold">Mengenal Destinasi</p>
           <h2 class="section-title light mb-20">
             Keajaiban Alam<br><em class="gold">Tersembunyi</em>
           </h2>
           <p class="teks-light">
             <strong style="color:white;">Danau Linow</strong> adalah danau kawah vulkanik yang
-            terbentuk ribuan tahun lalu akibat letusan gunung berapi di kawasan Tomohon.
-            Kata "Linow" sendiri berasal dari bahasa lokal yang berarti <em>berubah-ubah</em> —
-            sesuai sifat unik airnya.
+            terbentuk ribuan tahun silam akibat letusan gunung berapi di kawasan Tomohon.
+            Kata "Linow" sendiri berasal dari bahasa lokal Minahasa yang berarti <em>berubah-ubah</em> —
+            sesuai sifat magis airnya yang berganti warna setiap waktu.
           </p>
           <p class="teks-light">
-            Terletak di ketinggian 800 meter di atas permukaan laut, danau ini menawarkan
-            iklim sejuk, vegetasi hijau yang asri, dan tentu saja — fenomena warna air
-            yang tidak akan ditemukan di tempat lain di dunia.
+            Terletak di ketinggian 800 meter di atas permukaan laut, kawasan ini menawarkan
+            hawa sejuk 18–24°C, dikelilingi hutan perbukitan asri, dan pemandangan kawah alami yang tak akan Anda temukan di tempat lain.
           </p>
 
           <div class="grid-2" style="margin-top: 28px; gap: 14px;">
@@ -98,7 +108,7 @@
             </div>
             <div class="info-card dark-card">
               <div class="info-label">Jam Buka</div>
-              <div class="info-value">08.00 – 18.00</div>
+              <div class="info-value">08.00 – 18.00 WITA</div>
             </div>
             <div class="info-card dark-card">
               <div class="info-label">Tiket Masuk</div>
@@ -111,40 +121,43 @@
     </div>
   </section>
 
-  <section class="section-light">
-    <div class="container">
+  <section class="section-light py-5">
+    <div class="container" data-aos="fade-up">
       <div style="text-align:center; margin-bottom: 50px;">
-        <p class="eyebrow teal">Yang Menanti Anda</p>
-        <h2 class="section-title dark">Daya Tarik <em>Utama</em></h2>
+        <p class="eyebrow teal">Pesona Utama</p>
+        <h2 class="section-title dark">Daya Tarik <em>Kawasan</em></h2>
+        <p class="teks-dark" style="max-width: 650px; margin: 0 auto;">
+          Mulai dari fenomena sains langka, habitat satwa liar, kuliner khas Minahasa, hingga pengalaman bermalam di tepi danau.
+        </p>
       </div>
 
       <div class="grid-3">
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-right">
           <img src="images/Danau Hijau Zambrut.webp" alt="Danau warna hijau zamrud" />
           <div class="foto-overlay">
             <span class="pill-tag">Fenomena</span>
-            <h3>Perubahan Warna Air</h3>
+            <h3>Perubahan 3 Warna Air</h3>
           </div>
         </div>
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-up">
           <img src="images/Burung Belibis.webp" alt="Burung Belibis" />
           <div class="foto-overlay">
-            <span class="pill-tag">Flora & Fauna</span>
+            <span class="pill-tag">Fauna Alami</span>
             <h3>Habitat Burung Belibis</h3>
           </div>
         </div>
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-left">
           <img src="images/Spot Foto Menarik.webp" alt="Spot foto menarik" />
           <div class="foto-overlay">
-            <span class="pill-tag">Wisata</span>
-            <h3>Spot Foto Instagramable</h3>
+            <span class="pill-tag">Fotografi</span>
+            <h3>Dermaga Foto Instagramable</h3>
           </div>
         </div>
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-right">
           <img src="images/D-Linow Restaurant.webp" alt="D-Linow Restaurant" />
           <div class="foto-overlay">
             <span class="pill-tag">Kuliner</span>
@@ -152,19 +165,19 @@
           </div>
         </div>
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-up">
           <img src="images/Linow Coffee Shop.webp" alt="Linow Coffee Shop" />
           <div class="foto-overlay">
-            <span class="pill-tag">Kuliner</span>
+            <span class="pill-tag">Santai</span>
             <h3>Linow Coffee Shop</h3>
           </div>
         </div>
 
-        <div class="foto-card">
+        <div class="foto-card galeri-item" data-aos="fade-left">
           <img src="images/Danau Linow Resort Campground.webp" alt="Linow Resort Campground" />
           <div class="foto-overlay">
             <span class="pill-tag">Akomodasi</span>
-            <h3>Linow Resort & Campground</h3>
+            <h3>Linow Resort &amp; Campground</h3>
           </div>
         </div>
 
@@ -172,65 +185,89 @@
     </div>
   </section>
 
-  <section class="section-green">
+  <section class="section-dark py-5" id="paketWisataSection">
     <div class="container">
-      <div class="grid-2" style="align-items: center; gap: 60px;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow gold">Paket Kunjungan</p>
+        <h2 class="section-title light">Pilihan Pengalaman <em class="gold">Wisata</em></h2>
+        <p class="teks-light" style="max-width: 650px; margin: 0 auto;">
+          Pilih paket yang paling sesuai dengan rencana liburan Anda, mulai dari kunjungan reguler hingga bermalam di bawah bintang.
+        </p>
+      </div>
 
-        <div>
-          <p class="eyebrow cream">Informasi Kunjungan</p>
-          <h2 class="section-title light mb-20">
-            Rencanakan<br><em>Perjalanan Anda</em>
-          </h2>
-          <p class="teks-light">
-            Danau Linow terletak hanya 25 kilometer dari Pusat Kota Manado, dapat ditempuh
-            dengan kendaraan pribadi maupun transportasi umum menuju Kota Tomohon.
-          </p>
-          <p class="teks-light">
-            Kawasan wisata buka setiap hari dan menyediakan berbagai fasilitas lengkap
-            untuk wisatawan lokal maupun mancanegara.
-          </p>
-
-          <div class="grid-2" style="margin-top: 28px; gap: 14px;">
-            <div class="info-card dark-card">
-              <div class="info-label">Lokasi</div>
-              <div class="info-value">Lahendong, Tomohon Selatan</div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-title">Tiket Masuk Reguler</h3>
+              <div class="experience-price">Rp 20.000 <span>/ orang</span></div>
             </div>
-            <div class="info-card dark-card">
-              <div class="info-label">Jarak dari Manado</div>
-              <div class="info-value">± 25 km (45 menit)</div>
-            </div>
-            <div class="info-card dark-card">
-              <div class="info-label">Buka Setiap</div>
-              <div class="info-value">Setiap Hari</div>
-            </div>
-            <div class="info-card dark-card">
-              <div class="info-label">Tiket Masuk</div>
-              <div class="info-value">Rp 20.000</div>
+            <div class="experience-body">
+              <ul class="experience-features">
+                <li><i class="bi bi-check-circle-fill"></i> Akses masuk area danau seharian</li>
+                <li><i class="bi bi-check-circle-fill"></i> Welcome drink (Kopi / Teh hangat)</li>
+                <li><i class="bi bi-check-circle-fill"></i> Akses spot foto &amp; dermaga kayu</li>
+                <li><i class="bi bi-check-circle-fill"></i> Area parkir kendaraan luas</li>
+              </ul>
+              <button class="btn-primary w-100 mt-auto" onclick="pilihPaketForm('reguler')">Pilih Paket Ini</button>
             </div>
           </div>
         </div>
 
-        <div>
-          <img src="images/Iklim.webp" alt="Kondisi alam di sekitar Danau Linow"
-               style="width:100%; height:420px; object-fit:cover; border-radius:20px; display:block;" />
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="experience-card featured">
+            <span class="experience-badge-popular">Paling Diminati</span>
+            <div class="experience-header">
+              <h3 class="experience-title">Paket Edukasi &amp; Geothermal</h3>
+              <div class="experience-price">Rp 50.000 <span>/ orang</span></div>
+            </div>
+            <div class="experience-body">
+              <ul class="experience-features">
+                <li><i class="bi bi-check-circle-fill"></i> Semua keuntungan Tiket Reguler</li>
+                <li><i class="bi bi-check-circle-fill"></i> Pemandu wisata lokal bersertifikat</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tur jalur semburan uap geothermal</li>
+                <li><i class="bi bi-check-circle-fill"></i> Edukasi fenomena 3 warna air</li>
+                <li><i class="bi bi-check-circle-fill"></i> Cinderamata gantungan kunci khas</li>
+              </ul>
+              <button class="btn-primary w-100 mt-auto" onclick="pilihPaketForm('tur')">Pilih Paket Ini</button>
+            </div>
+          </div>
         </div>
 
+        <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="experience-card">
+            <div class="experience-header">
+              <h3 class="experience-title">Paket Camping Danau Linow</h3>
+              <div class="experience-price">Rp 150.000 <span>/ tenda</span></div>
+            </div>
+            <div class="experience-body">
+              <ul class="experience-features">
+                <li><i class="bi bi-check-circle-fill"></i> Spot mendirikan tenda tepi danau</li>
+                <li><i class="bi bi-check-circle-fill"></i> Akses toilet &amp; shower air bersih 24 jam</li>
+                <li><i class="bi bi-check-circle-fill"></i> Area api unggun bersama malam hari</li>
+                <li><i class="bi bi-check-circle-fill"></i> Panorama matahari terbit berkabut</li>
+                <li><i class="bi bi-check-circle-fill"></i> Termasuk tiket masuk 2 orang</li>
+              </ul>
+              <button class="btn-primary w-100 mt-auto" onclick="pilihPaketForm('camping')">Pilih Paket Ini</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section-light" id="reservasi">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <div style="text-align: center; margin-bottom: 40px;">
         <p class="eyebrow teal">Pesan Sekarang</p>
         <h2 class="section-title dark">Reservasi <em>Kunjungan</em></h2>
         <p class="teks-dark" style="max-width: 600px; margin: 0 auto;">
-          Rencanakan liburan Anda ke Danau Linow dengan mudah. Isi formulir di bawah ini untuk pemesanan tiket masuk atau paket wisata.
+          Dapatkan konfirmasi tiket instan secara daring. Isi formulir pemesanan di bawah ini untuk mengamankan tiket Anda.
         </p>
       </div>
 
       <div class="form-container">
-        <form id="formReservasi" onsubmit="event.preventDefault(); alert('Terima kasih! Reservasi tiket Anda berhasil dikirim.'); this.reset();">
+        <form id="formReservasi">
           <div class="form-grid">
             <div class="form-group">
               <label for="nama">Nama Lengkap</label>
@@ -249,12 +286,12 @@
               <input type="date" id="tanggal" name="tanggal" required />
             </div>
             <div class="form-group">
-              <label for="jumlah">Jumlah Pengunjung</label>
-              <input type="number" id="jumlah" name="jumlah" min="1" max="100" value="1" required />
+              <label for="jumlahOrang">Jumlah Pengunjung</label>
+              <input type="number" id="jumlahOrang" name="jumlah" min="1" max="100" value="1" required />
             </div>
             <div class="form-group">
-              <label for="paket">Pilihan Paket Wisata</label>
-              <select id="paket" name="paket" required>
+              <label for="paketWisata">Pilihan Paket Wisata</label>
+              <select id="paketWisata" name="paket" required>
                 <option value="reguler">Tiket Masuk Reguler (Rp 20.000 / orang)</option>
                 <option value="tur">Paket Edukasi &amp; Geothermal (Rp 50.000 / orang)</option>
                 <option value="camping">Paket Camping Linow (Rp 150.000 / tenda)</option>
@@ -267,13 +304,13 @@
             <label>Waktu Kunjungan yang Direncanakan</label>
             <div class="radio-group">
               <label class="radio-label">
-                <input type="radio" name="waktu" value="pagi" checked /> Pagi (08.00 - 11.00)
+                <input type="radio" name="waktu" value="Pagi (08.00 - 11.00)" checked /> Pagi (08.00 - 11.00)
               </label>
               <label class="radio-label">
-                <input type="radio" name="waktu" value="siang" /> Siang (11.00 - 14.00)
+                <input type="radio" name="waktu" value="Siang (11.00 - 14.00)" /> Siang (11.00 - 14.00)
               </label>
               <label class="radio-label">
-                <input type="radio" name="waktu" value="sore" /> Sore / Sunset (14.00 - 18.00)
+                <input type="radio" name="waktu" value="Sore (14.00 - 18.00)" /> Sore / Sunset (14.00 - 18.00)
               </label>
             </div>
           </div>
@@ -283,8 +320,201 @@
             <textarea id="catatan" name="catatan" rows="3" placeholder="Tuliskan jika ada kebutuhan khusus atau rombongan..."></textarea>
           </div>
 
+          <div id="totalBiaya" class="alert alert-success mt-3 d-none"></div>
+
           <button type="submit" class="btn-primary btn-submit">Kirim Reservasi Tiket</button>
         </form>
+
+        <div id="buktiReservasi" class="d-none mt-4 p-4 rounded-3" style="background:#f8fafc; border:2px dashed #2E8B75;">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="mb-0" style="color:#17352E; font-family:'Playfair Display',serif;">🎫 E-Tiket Danau Linow</h4>
+            <span class="badge bg-success">TERKONFIRMASI</span>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Kode Booking</small>
+              <strong id="tiketKode" class="text-dark">LNW-0000</strong>
+            </div>
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Nama Pemesan</small>
+              <strong id="tiketNama" class="text-dark">-</strong>
+            </div>
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Tanggal Kunjungan</small>
+              <strong id="tiketTanggal" class="text-dark">-</strong>
+            </div>
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Paket Wisata</small>
+              <strong id="tiketPaket" class="text-dark">-</strong>
+            </div>
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Jumlah Pengunjung</small>
+              <strong id="tiketJumlah" class="text-dark">-</strong>
+            </div>
+            <div class="col-6 col-md-4">
+              <small class="text-muted d-block">Total Biaya</small>
+              <strong id="tiketTotal" style="color:#2E8B75;">-</strong>
+            </div>
+          </div>
+          <p class="small text-muted mb-3">*Simpan atau cetak e-tiket ini untuk ditunjukkan kepada petugas saat tiba di lokasi.</p>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-success btn-sm" onclick="window.print()"><i class="bi bi-printer"></i> Cetak / Simpan E-Tiket</button>
+            <button class="btn btn-secondary btn-sm" onclick="buatReservasiBaru()">Pesan Tiket Lain</button>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modalAdmin">
+            <i class="bi bi-shield-lock me-1"></i> Buka Panel Petugas (Lihat Semua Data Tersimpan)
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-green py-5">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow cream">Pengalaman Nyata</p>
+        <h2 class="section-title light">Apa Kata <em class="gold">Para Pengunjung?</em></h2>
+        <p class="teks-light" style="max-width: 650px; margin: 0 auto;">
+          Simak ulasan dari ribuan wisatawan nusantara dan mancanegara yang telah terpesona oleh Danau Linow.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Air danaunya benar-benar berubah warna! Pagi hari terlihat hijau zamrud tenang, pas siang terik berubah jadi biru toska berkilau. Udaranya sejuk banget!"
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div>
+                <div class="testimonial-name">Amanda Putri</div>
+                <div class="testimonial-origin">Wisatawan asal Jakarta</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Ngopi di Linow Coffee Shop sambil melihat uap belerang menari di atas air danau adalah pengalaman healing terbaik. Pelayanan ramah dan fasilitasnya sangat bersih."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">K</div>
+              <div>
+                <div class="testimonial-name">Kevin Mandagi</div>
+                <div class="testimonial-origin">Wisatawan asal Manado</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Destinasi wajib di Sulawesi Utara! Tempatnya instagramable di setiap sudut. Paket edukasi geotermalnya sangat informatif untuk keluarga dan anak-anak."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div>
+                <div class="testimonial-name">Sarah Wijaya</div>
+                <div class="testimonial-origin">Wisatawan asal Surabaya</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-light py-5">
+    <div class="container" style="max-width: 850px;">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="eyebrow teal">Pusat Bantuan</p>
+        <h2 class="section-title dark">Pertanyaan <em>Umum (FAQ)</em></h2>
+        <p class="teks-dark">
+          Informasi penting yang sering ditanyakan calon wisatawan sebelum berkunjung ke Danau Linow.
+        </p>
+      </div>
+
+      <div class="accordion" id="faqAccordion" data-aos="fade-up">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+              Berapa harga tiket masuk dan jam operasional Danau Linow?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Tiket masuk reguler seharga Rp 20.000 per orang sudah termasuk akses ke seluruh area tepi danau dan welcome drink (kopi/teh). Danau Linow buka setiap hari mulai pukul 08.00 hingga 18.00 WITA.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Kapan waktu terbaik untuk menyaksikan perubahan warna air?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Waktu terbaik adalah antara pukul 09.00 hingga 13.00 WITA. Di pagi hari (08.00-10.30) air cenderung berwarna hijau zamrud, dan saat matahari terik di siang hari (11.00-14.00) air akan bermutasi menjadi biru toska jernih.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Apakah aroma belerang di sekitar danau aman untuk pengunjung?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Sangat aman untuk dikunjungi wisatawan umum. Uap belerang di area terbuka justru memiliki sensasi hangat dan menyegarkan. Namun bagi pengunjung dengan riwayat asma akut disarankan tidak berlama-lama di titik semburan kawah utama.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+              Bagaimana rute dan akses transportasi dari Kota Manado?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Danau Linow berjarak sekitar 30 km dari pusat Kota Manado (sekitar 50–60 menit perjalanan melalui jalan raya Manado–Tomohon). Akses jalan beraspal mulus dapat dilalui kendaraan roda dua, mobil pribadi, hingga bus pariwisata.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -318,10 +548,88 @@
     </div>
     <hr class="footer-divider" />
     <div class="footer-bottom">
-      <p>© 2025 Danau Linow — Dibuat untuk Tugas Mata Kuliah Web Design</p>
-      <a href="index.html">↑ Kembali ke Atas</a>
+      <p>© 2026 Danau Linow — Dibuat untuk Tugas Mata Kuliah Web Design</p>
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#modalAdmin" data-bs-toggle="modal" data-bs-target="#modalAdmin" class="text-muted small" style="text-decoration:none;"><i class="bi bi-shield-lock"></i> Panel Petugas</a>
+        <a href="index.html">↑ Kembali ke Atas</a>
+      </div>
     </div>
   </footer>
+
+  <div class="modal fade" id="modalAdmin" tabindex="-1" aria-labelledby="modalAdminLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header" style="background:#17352E; color:white;">
+          <h5 class="modal-title" id="modalAdminLabel"><i class="bi bi-shield-lock me-2"></i>Panel Petugas — Kelola Data Reservasi</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted small">Panel khusus pengelola untuk melihat data reservasi yang tersimpan di sistem browser (localStorage).</p>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle" id="tabelReservasi">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Kode</th>
+                  <th>Nama</th>
+                  <th>WhatsApp</th>
+                  <th>Tanggal</th>
+                  <th>Jumlah</th>
+                  <th>Paket</th>
+                  <th>Waktu</th>
+                  <th>Total</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="tabelBody">
+                <tr><td colspan="10" class="text-center text-muted">Belum ada reservasi tersimpan.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-outline-danger btn-sm" onclick="hapusSemuaReservasi()"><i class="bi bi-trash"></i> Bersihkan Semua Data</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark border-0">
+        <div class="modal-header border-0">
+          <h6 class="modal-title text-white" id="imgModalCaption"></h6>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="imgModalSrc" src="" alt="" class="w-100"
+               style="max-height:80vh; object-fit:contain;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+    <div id="toastReservasi" class="toast align-items-center text-bg-success border-0" role="alert"
+         aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <strong>✅ Reservasi Berhasil!</strong> E-Tiket Anda telah diterbitkan.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Tutup"></button>
+      </div>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" class="btn btn-primary rounded-circle position-fixed"
+    style="bottom:30px; right:30px; width:50px; height:50px; z-index:999; display:none; background:#2E8B75; border:none; align-items:center; justify-content:center;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
